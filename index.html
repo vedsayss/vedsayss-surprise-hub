@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Madam Ji ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("floating-heart");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s"; 
+        document.body.appendChild(heart);
+        
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+    
+    setInterval(createHeart, 500);
+    </script>
+    
+<body>
+
+    <div class="container">
+        <div class="message" id="msg1">
+            <h2>It's your special day! 🎉🥳</h2>
+            <button onclick="nextMsg(1)">OK</button>
+        </div>
+        <div class="message" id="msg2">
+            <h2>You are special for me! ❤️</h2>
+            <button onclick="nextMsg(2)">OK</button>
+        </div>
+        <div class="message" id="msg3">
+            <h2>Do you want to see what I made? 🤭</h2>
+            <button onclick="nextMsg(3)">Yes</button>
+        </div>
+        <div class="message" id="msg4">
+            <h2>Have a look at it, Madam Ji! ❤️🥹</h2>
+            <button onclick="nextMsg(4)">OK</button>
+        </div>
+        <div class="message" id="msg5">
+            <h2>Play a song for you? 🎶</h2>
+            <button onclick="playMusic()">Play "Maine Khud Ko"</button>
+        </div>
+        <div class="message" id="msg6">
+            <h2>Let's decorate the place! 🎀</h2>
+            <button onclick="decorate()">Decorate</button>
+        </div>
+        <div class="message" id="msg7">
+            <h2>Time to fly balloons! 🎈</h2>
+            <button onclick="flyBalloons()">Fly Balloons</button>
+        </div>
+        <div class="message" id="msg8">
+            <h2>Open my message for you! 💌</h2>
+            <button onclick="openLetter()">Open Letter</button>
+        </div>
+
+        <div class="letter-container" id="letterBox">
+    <div class="letter">
+        <h2>Dear Madam Ji, ❤️</h2>
+        <p>From the moment you walked into my life, everything changed. You are not just my love; you are my happiness, my peace, my forever. 💖</p>
+        <p>Your laughter is my favorite melody, your smile is my sunshine, and your love is my greatest blessing. 🌸</p>
+        <p><strong>You are my everything, my reason to smile, my world. ❤️</strong></p>
+        <p>Through every moment, every memory, every heartbeat—I am yours. Forever. 💕</p>
+        <p><strong>I love you beyond words, beyond time, beyond everything. ❤️</strong></p>
+        <p><em>Always yours, forever and ever.</em></p>
+        <button onclick="closeLetter()">Close</button>
+    </div>
+</div>
+
+        <audio id="song" src="d:\songs\Maine Khud Ko Ragini Mms 2 320 Kbps.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
